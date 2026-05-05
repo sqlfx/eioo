@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo1123.HelloController">
+  <tabs>
+    <Tab text="Task1">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #b78657;">
+               <children>
+                  <Line fx:id="Line" endX="100.0" fill="RED" layoutX="150.0" layoutY="65.0" onMouseClicked="#LineMouseDragged" onMousePressed="#LineMousePressed" onScroll="#OnScroll" startX="-100.0" stroke="RED" strokeWidth="8.0" />
+                  <Circle fx:id="Circle" fill="RED" layoutX="156.0" layoutY="243.0" onMouseClicked="#OnMouseClick" onScroll="#OnScroll" radius="79.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle fx:id="Rectange" arcHeight="5.0" arcWidth="5.0" fill="RED" height="200.0" layoutX="365.0" layoutY="86.0" onMouseExited="#OnMouseExited" onMouseMoved="#OnMouseMoved" onScroll="#OnScroll" stroke="BLACK" strokeType="INSIDE" width="158.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Task2">
+      <content>
+        <AnchorPane fx:id="paneltwo" minHeight="0.0" minWidth="0.0" onMouseClicked="#PaneClick" onMouseDragged="#PaneDragged" onMouseMoved="#PaneMoved" onMousePressed="#PanePresed" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitMenuButton fx:id="menuitem" layoutX="260.0" layoutY="9.0" mnemonicParsing="false" onAction="#OnActionMenuItem" text="Фигура">
+                    <items>
+                      <MenuItem fx:id="menuitemcircle" mnemonicParsing="false" onAction="#OnActionMenuItemCircle" text="Круг" />
+                      <MenuItem fx:id="menuitemline" mnemonicParsing="false" onAction="#OnActionMenuItemLine" text="Линия" />
+                        <MenuItem fx:id="menuitemrectange" mnemonicParsing="false" onAction="#OnActionMenuItemRectange" text="Прямоугольник" />
+                    </items>
+                  </SplitMenuButton>
+                  <Slider fx:id="slider" layoutX="452.0" layoutY="14.0" />
+                  <SplitMenuButton fx:id="menucolor" layoutX="23.0" layoutY="9.0" mnemonicParsing="false" onAction="#OnActionMenuColor" text="Цвет">
+                    <items>
+                      <MenuItem fx:id="menucolorred" mnemonicParsing="false" onAction="#OnActionMenuColorRed" text="красный" />
+                      <MenuItem fx:id="menucolorblack" mnemonicParsing="false" onAction="#OnActionMenuColorBlack" text="черный" />
+                        <MenuItem fx:id="menucolorblue" mnemonicParsing="false" onAction="#OnActionMenuColorBlue" text="синий" />
+                    </items>
+                  </SplitMenuButton>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Task3">
+        <content>
+          <AnchorPane fx:id="pane3" minHeight="0.0" minWidth="0.0" onMouseDragged="#pane3Dragged" onMousePressed="#OnActionPressed3" onScroll="#ScrollPane3" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Box fx:id="Box" depth="100" height="100" layoutX="397.0" layoutY="236.0" width="100" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
